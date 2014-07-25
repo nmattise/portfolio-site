@@ -4092,8 +4092,13 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   }
 }
 .navbar-default {
+<<<<<<< HEAD
   background-color: #f8f8f8;
   border-color: #e7e7e7;
+=======
+  background-color: rgba(44, 62, 80, 0.75);
+  border-color: transparent;
+>>>>>>> origin/master
 }
 .navbar-default .navbar-brand {
   color: #777;
