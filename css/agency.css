@@ -171,12 +171,12 @@ fieldset[disabled] .btn-xl.active {
 
 .navbar-default {
     border-color: transparent;
-    background-color: #333;
+    background-color: #818181;
 }
 
 .navbar-default .navbar-brand {
     font-family: "Kaushan Script","Helvetica Neue",Helvetica,Arial,cursive;
-    color: #4d36fe;
+    color: #fff;
 }
 
 .navbar-default .navbar-brand:hover,
@@ -253,7 +253,7 @@ fieldset[disabled] .btn-xl.active {
 
     .navbar-default.navbar-shrink {
         padding: 10px 0;
-        background-color: #222;
+        background-color: rgba(111, 111, 111, 0.9);
     }
 
     .navbar-default.navbar-shrink .navbar-brand {
@@ -265,7 +265,7 @@ header {
     text-align: center;
     color: #fff;
     background-attachment: scroll;
-    background-image: url(../img/header-bg.jpg);
+    background-image: url(../img/stockComputer.jpg);
     background-position: center center;
     background-repeat: none;
     -webkit-background-size: cover;
