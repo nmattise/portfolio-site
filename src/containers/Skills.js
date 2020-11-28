@@ -53,10 +53,10 @@ function Skills() {
             {Object.entries(skills).map(([key, skill], i) => {
 
                 return <Grid item container direction={i % 2 ? 'row-reverse' : 'row'} spacing={1} key={key}>
-                    <Grid item xs={12} sm={3} container direction='row' justify='center' alignItems='center'>
+                    <Grid item xs={2} container direction='row' justify='center' alignItems='center'>
                         <Avatar style={{ backgroundColor: skill.color }} className={classes.large}>{skill.icon}</Avatar>
                     </Grid>
-                    <Grid item xs={12} sm={9} >
+                    <Grid item xs={10} >
                         <Typography variant='h5'>{skill.title}</Typography>
                         <Typography variant='body2'>
                             {skill.description}
