@@ -38,7 +38,7 @@ export const socials = [
 	},
 ];
 export const quotes = [
-	{ source: "N.W.Mattise", quote: "Tabs over spaces." },
+	{ source: "Self-Respecting Software Developers", quote: "Tabs over spaces." },
 	{
 		source: "N.W.Mattise",
 		quote:

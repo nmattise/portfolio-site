@@ -8,6 +8,7 @@ const colors = {
 
 }
 const theme = createMuiTheme({
+	shape:{borderRadius:0,},
     typography: {
 		// htmlFontSize: 14,
 		// fontSize: 14,

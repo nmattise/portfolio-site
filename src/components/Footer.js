@@ -1,12 +1,21 @@
 import React from "react";
 import { socials, quotes } from "../data";
-import { Grid, Link, Tooltip, Typography, makeStyles } from "@material-ui/core";
+import { Grid, Link, Tooltip, Typography, makeStyles, Divider } from "@material-ui/core";
+
 const useStyles = makeStyles((theme) => ({
 	icon: {
 		margin: theme.spacing(2),
 	},
+	div: {
+		margin: `4px 8px 8px 8px`,
+		background: "rgba(255,255,255,0.4)",
+	},
+	footer: {
+		flexShrink: 0,
+		color: theme.palette.primary.contrastText,
+		margin: theme.spacing(1),
+	},
 }));
-
 // Write function to randomly shuffle an array  and then loop through it on a setInterval
 function randomLooping() {}
 
@@ -39,4 +48,17 @@ function Quotes() {
 		</Typography>
 	);
 }
-export { SocialLinks, Quotes };
+function Footer() {
+	const classes = useStyles();
+	return (
+		<footer className={classes.footer}>
+			<Grid container direction="column" spacing={1}>
+				<Quotes />
+				<Divider className={classes.div} />
+				<SocialLinks />
+			</Grid>
+		</footer>
+	);
+}
+
+export default Footer
