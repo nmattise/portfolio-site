@@ -25,5 +25,21 @@ const toolsQuery = gql`
 		}
 	}
 `;
-
-export { graphqlClient, toolsQuery };
+const projectsQuery = gql`
+	{
+		projects {
+			id
+			publishedAt
+			title
+			description
+			tech
+			image {
+				fileName
+				size
+				id
+				url
+			}
+		}
+	}
+`;
+export { graphqlClient, toolsQuery, projectsQuery };

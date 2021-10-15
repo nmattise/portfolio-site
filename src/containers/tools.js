@@ -24,7 +24,7 @@ function Tools() {
 	return (
 		<div>
 			<h1>Coming Soon!</h1>
-			Tools in use: {tools ? `${tools.length} and counting.` : "Loading..."}
+			Tools Nick uses: {tools ? `${tools.length} and counting.` : "Loading..."}
 		</div>
 	);
 }
