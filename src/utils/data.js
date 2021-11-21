@@ -30,9 +30,13 @@ const projectsQuery = gql`
 		projects {
 			id
 			publishedAt
+			startDate
+			endDate
 			title
 			description
 			tech
+			url
+			codeRepositoryUrl
 			image {
 				fileName
 				size

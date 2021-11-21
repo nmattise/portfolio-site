@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { makeStyles } from "@mui/styles";
+import { Typography } from "@mui/material";
 import { graphqlClient, toolsQuery } from "../utils/data";
 
 const useStyles = makeStyles((theme) => ({}));
@@ -23,8 +24,17 @@ function Tools() {
 	}, []);
 	return (
 		<div>
-			<h1>Coming Soon!</h1>
-			Tools Nick uses: {tools ? `${tools.length} and counting.` : "Loading..."}
+			<Typography variant="h4">Tools and Tips</Typography>
+			<Typography variant="subtitle">
+				Hardware and software I use be it coding, riding, reading, or shredding.
+			</Typography>
+			<br></br>
+			<Typography variant="subtitle">
+				Listing here does equal endorsement
+			</Typography>
+			<Typography variant="h3">Coming Soon!</Typography>
+			Tools Nick uses:{" "}
+			{tools ? `${tools.length} and counting.` : "Loading..."}
 		</div>
 	);
 }

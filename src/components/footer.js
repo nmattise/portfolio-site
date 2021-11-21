@@ -1,5 +1,6 @@
 import React from "react";
-import { socials, quotes } from "../data/index";
+import { socials } from "../data/index";
+import { quotes } from "../data/quotes";
 import { Grid, Link, Tooltip, Typography, Divider } from "@mui/material";
 import { makeStyles } from "@mui/styles";
 const useStyles = makeStyles((theme) => ({
@@ -32,7 +33,11 @@ function SocialLinks() {
 				return (
 					<Grid item key={social.id}>
 						<Tooltip title={social.title}>
-							<Link href={social.link} color="inherit" className={classes.icon}>
+							<Link
+								href={social.link}
+								color="inherit"
+								className={classes.icon}
+							>
 								{social.icon}
 								{/* <Typography variant='subtitle1' align='center'>{social.title}</Typography> */}
 							</Link>

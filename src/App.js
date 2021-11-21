@@ -10,6 +10,7 @@ import Home from "./containers/home";
 import Projects from "./containers/projects";
 import Resume from "./containers/resume";
 import Tools from "./containers/tools";
+
 const useStyles = makeStyles((theme) => ({
 	root: {
 		boxShadow: theme.shadows[5],
@@ -28,7 +29,8 @@ const useStyles = makeStyles((theme) => ({
 		margin: theme.spacing(1),
 	},
 }));
-function App(params) {
+
+function App(props) {
 	const classes = useStyles();
 	return (
 		<div className={classes.root}>
