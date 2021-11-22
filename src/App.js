@@ -7,7 +7,7 @@ import Footer from "./components/footer";
 
 // Routes
 import Home from "./containers/home";
-import Projects from "./containers/projects";
+import Projects from "./containers/Projects";
 import Resume from "./containers/resume";
 import Tools from "./containers/tools";
 

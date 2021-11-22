@@ -1,10 +1,7 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
-
 import { makeStyles } from "@mui/styles";
 import {
-	Grid,
-	Container,
 	Typography,
 	Card,
 	CardContent,
@@ -23,12 +20,12 @@ import { sampleProject } from "../data/schemas.js";
 const useStyles = makeStyles((theme) => ({
 	root: {},
 	tech: {
-		maxHeight: 80,
+		maxHeight: 85,
 		overflowY: "auto",
 	},
 	techChip: {
-		marginLeft: theme.spacing(1),
 		marginBottom: theme.spacing(1),
+		marginRight: theme.spacing(1),
 	},
 	projectImage: {
 		display: "flex",
@@ -38,12 +35,19 @@ const useStyles = makeStyles((theme) => ({
 	},
 }));
 
+function isOverflown(element) {
+	return (
+		element.scrollHeight > element.clientHeight ||
+		element.scrollWidth > element.clientWidth
+	);
+}
 function ProjectProfile(props) {
 	const classes = useStyles();
 	const project = props.data;
 	const images = project.image;
 	const [showImages, setShowImages] = useState(false);
 	const [showImage, setShowImage] = useState(null);
+
 	return (
 		<div>
 			<Card>
@@ -56,7 +60,7 @@ function ProjectProfile(props) {
 				{images[0] && (
 					<CardMedia
 						component="img"
-						alt="green iguana"
+						alt={images[0].fileName}
 						height="140"
 						image={images[0].url}
 						onClick={() => setShowImage(images[0])}
@@ -73,13 +77,19 @@ function ProjectProfile(props) {
 						{(project.tech ?? []).map((tech, i) => (
 							<Chip
 								label={tech}
-								className={i !== 0 && classes.techChip}
+								className={classes.techChip}
 							></Chip>
 						))}
 					</div>
 					<Typography variant="h6">Project Timeline</Typography>
 					<Typography>
-						{project.startDate} - {project.endDate}
+						{`${
+							new Date(project.startDate).getMonth() + 1
+						}/${new Date(project.startDate).getFullYear()}`}{" "}
+						to{" "}
+						{`${
+							new Date(project.endDate).getMonth() + 1
+						}/${new Date(project.endDate).getFullYear()}`}
 					</Typography>
 				</CardContent>
 
@@ -113,7 +123,7 @@ function ProjectProfile(props) {
 
 function ProjectImages(props) {
 	const { onClose, images = [], title, open } = props;
-	const classes = useStyles();
+
 	const handleClose = () => {
 		onClose();
 	};
@@ -131,7 +141,7 @@ function ProjectImages(props) {
 						key={image.id}
 						onClick={() => setShowImage(image)}
 					>
-						<img loading="lazy" src={image.url}></img>
+						<img loading="lazy" src={image.url} alt={image.fileName} />
 					</ImageListItem>
 				))}
 			</ImageList>
@@ -148,7 +158,7 @@ function ProjectImages(props) {
 
 function ImageDialog(props) {
 	const { onClose, image, open } = props;
-	const classes = useStyles();
+
 	const handleClose = () => {
 		onClose();
 	};
@@ -158,7 +168,7 @@ function ImageDialog(props) {
 				loading="lazy"
 				src={image.url}
 				alt={image.fileName}
-				style={{ maxHeight: 600 }}
+				style={{ maxHeight: 600, width: "100%" }}
 			></img>
 		</Dialog>
 	);

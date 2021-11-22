@@ -6,6 +6,7 @@ export default function Resume() {
 		<Container>
 			<Typography variant="h4">Resume</Typography>
 			<iframe
+				title='Mattise Public Resume'
 				style={{
 					height: "100%",
 					width: "100%",

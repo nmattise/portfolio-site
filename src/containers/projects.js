@@ -1,23 +1,17 @@
 import React, { useEffect, useState } from "react";
-import { makeStyles } from "@mui/styles";
-import CircularProgress from "@mui/material/CircularProgress";
 
-import { Grid, Typography } from "@mui/material";
+import { Typography } from "@mui/material";
 import { graphqlClient, projectsQuery } from "../utils/data";
-import { ProjectProfile } from "../components/project.js";
+import { ProjectProfile } from "../components/ProjectProfile";
 import Masonry from "@mui/lab/Masonry";
 
-const useStyles = makeStyles((theme) => ({}));
-
 function Projects() {
-	const classes = useStyles();
 	const [projects, setProjects] = useState([]);
 
 	useEffect(() => {
 		const fetchProjects = async () => {
 			try {
 				const { projects } = await graphqlClient.request(projectsQuery);
-				console.log(projects);
 				setProjects(projects);
 			} catch (error) {
 				console.error(error);

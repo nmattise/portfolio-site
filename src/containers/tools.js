@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
-import { makeStyles } from "@mui/styles";
+// import { makeStyles } from "@mui/styles";
 import { Typography } from "@mui/material";
 import { graphqlClient, toolsQuery } from "../utils/data";
 
-const useStyles = makeStyles((theme) => ({}));
+// const useStyles = makeStyles((theme) => ({}));
 function Tools() {
-	const classes = useStyles();
+	// const classes = useStyles();
 	const [tools, setTools] = useState(null);
 
 	useEffect(() => {
