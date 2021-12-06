@@ -31,7 +31,7 @@ const useStyles = makeStyles((theme) => ({
 		display: "flex",
 		margin: "auto",
 		maxWidth: "100%",
-		maxHeight: 100,
+		maxHeight: 600,
 	},
 }));
 
@@ -141,7 +141,11 @@ function ProjectImages(props) {
 						key={image.id}
 						onClick={() => setShowImage(image)}
 					>
-						<img loading="lazy" src={image.url} alt={image.fileName} />
+						<img
+							loading="lazy"
+							src={image.url}
+							alt={image.fileName}
+						/>
 					</ImageListItem>
 				))}
 			</ImageList>
@@ -158,7 +162,7 @@ function ProjectImages(props) {
 
 function ImageDialog(props) {
 	const { onClose, image, open } = props;
-
+	const classes = useStyles();
 	const handleClose = () => {
 		onClose();
 	};
@@ -168,7 +172,7 @@ function ImageDialog(props) {
 				loading="lazy"
 				src={image.url}
 				alt={image.fileName}
-				style={{ maxHeight: 600, width: "100%" }}
+				className={classes.projectImage}
 			></img>
 		</Dialog>
 	);
