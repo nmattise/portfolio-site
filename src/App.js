@@ -1,15 +1,15 @@
 import React from "react";
 import { Container } from "@mui/material";
-import NavigationBar from "./components/toolbar";
+import NavigationBar from "./components/NavigationBar";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { makeStyles } from "@mui/styles";
-import Footer from "./components/footer";
+import Footer from "./components/Footer.js";
 
 // Routes
-import Home from "./containers/home";
-import Projects from "./containers/Projects";
-import Resume from "./containers/resume";
-import Tools from "./containers/tools";
+import Home from "./containers/Home.js";
+import Projects from "./containers/Projects.js";
+import Resume from "./containers/Resume.js";
+import Tools from "./containers/Tools.js";
 
 const useStyles = makeStyles((theme) => ({
 	root: {

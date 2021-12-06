@@ -1,8 +1,8 @@
 import { render, screen } from "@testing-library/react";
-import Toolbar from "./toolbar";
+import NavigationBar from "./NavigationBar";
 
 test("renders tools link", async () => {
-	render(<Toolbar />);
+	render(<NavigationBar />);
 	const linkElement = screen.getByText(/Tools/i);
 	expect(linkElement).toBeInTheDocument();
 });

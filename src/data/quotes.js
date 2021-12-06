@@ -4,6 +4,10 @@ export const quotes = [
 		source: "N.W.Mattise",
 		quote:
 			"The faster you go the further you'll get; the slower you go the more you'll see.",
+	},{
+		source: "Nick Mattise",
+		quote:
+			"I encourage all of my Friends and Family to take the see nick route.",
 	},
 	{
 		source: "N.W.Mattise",
